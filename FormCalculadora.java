@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class FormCalculadora extends Frame implements ActionListener{
-    //COMPONENTS
+    
     private TextField screen = new TextField("0");
     private Button n1 = new Button("1");
     private Button n2 = new Button("2");
@@ -24,11 +24,9 @@ public class FormCalculadora extends Frame implements ActionListener{
     private Button simbolDot = new Button(".");
     private Button simbolClean = new Button("C");
     
-    //CONTAINERS - C1 = BODY - C2 = SCREEN 
     private Container c1 = new Container();
     private Container c2 = new Container();
 
-    //ATRIBUTTES
     private boolean val2 = false;
     private char opt = ' ';
     private String screenNow = "";
@@ -37,14 +35,12 @@ public class FormCalculadora extends Frame implements ActionListener{
     private double value1 = 0;
     private double value2 = 0;
 
-    //UPDATE THE SCREEN
-    //MUST BE USED ALWAYS AFTER A BUTTON GET PRESSED
+    
     private void refreshScreen(){
         screenNow = number01 + " " + opt + " " + number02;
         screen.setText(screenNow);
     }
 
-    //MATH CALCS
     private double multiplication(double v1, double v2){
         return v1 * v2;
     }
@@ -57,7 +53,6 @@ public class FormCalculadora extends Frame implements ActionListener{
         return v1 - v2;
     }
 
-    //If the divisor is 0, it must return a error.
     private double divide(double v1, double v2){
 
         if(v2 == 0){
@@ -68,7 +63,7 @@ public class FormCalculadora extends Frame implements ActionListener{
     }
 
     public FormCalculadora(String nome, int altura, int largura, int colinic, int lilinic){
-        //FRAME
+        
         super(nome);
         setSize(largura, altura);
         setLocation(colinic, lilinic);
@@ -76,7 +71,6 @@ public class FormCalculadora extends Frame implements ActionListener{
         setLayout(new BorderLayout(2, 2));
         setResizable(false);
 
-        //CONTAINER BODY
         add(c1, BorderLayout.CENTER);
         c1.setLayout(new GridLayout(5, 4, 1, 1));
         c1.add(n7);
@@ -97,13 +91,13 @@ public class FormCalculadora extends Frame implements ActionListener{
         c1.add(simbolPlus);
         c1.add(simbolClean);
 
-        //SUPERIOR CONTAINER (SCREEN OF THE CALC)
+        
         add(c2, BorderLayout.NORTH);
         c2.setLayout(new BorderLayout());
         c2.add(screen, BorderLayout.CENTER);
         screen.setEditable(false);
 
-        //CREATE ACTION LISTENERS
+       
         n7.addActionListener(this);
         n8.addActionListener(this);
         n9.addActionListener(this);
@@ -122,7 +116,7 @@ public class FormCalculadora extends Frame implements ActionListener{
         simbolPlus.addActionListener(this);
         simbolClean.addActionListener(this);
 
-        //CLOSE WINDOW
+        
         addWindowListener(new FechaJanela());
     }
 
