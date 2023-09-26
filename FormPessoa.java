@@ -1,3 +1,5 @@
+//João Antonio Dias
+// Isabelly Barbosa Gonçalves
 package Pessoa;
 import javax.swing.*;
 import java.awt.*;
