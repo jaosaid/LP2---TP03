@@ -1,3 +1,5 @@
+//João Antonio Dias
+// Isabelly Barbosa Gonçalves
 package Pessoa;
 
 public class Pessoa {
