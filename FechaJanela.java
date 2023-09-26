@@ -1,3 +1,5 @@
+//João Antonio Dias
+// Isabelly Barbosa Gonçalves
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
