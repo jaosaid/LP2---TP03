@@ -1,3 +1,5 @@
+//João Antonio Dias
+// Isabelly Barbosa Gonçalves
 package Pessoa;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
